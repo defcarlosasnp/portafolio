@@ -1214,6 +1214,15 @@ body.dark .certificado-pdf iframe {
 
 /* Mejoras de responsividad para móviles */
 @media (max-width: 768px) {
+  /* Asegurar que todo el contenido se mantenga dentro de los límites */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
   /* Header y navegación */
   .navbar {
     padding: 0.8rem 1rem;
@@ -1266,13 +1275,15 @@ body.dark .certificado-pdf iframe {
   
   /* Secciones principales */
   .section {
-    padding: 40px 15px;
+    padding: 40px 10px;
     min-height: auto;
+    box-sizing: border-box;
   }
   
   .container {
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0 5px;
+    box-sizing: border-box;
   }
   
   /* Sección de inicio */
@@ -1312,7 +1323,7 @@ body.dark .certificado-pdf iframe {
   /* Sección sobre mí */
   .sobre-mi {
     padding: 2rem 1rem;
-    margin: 20px 10px;
+    margin: 20px 5px;
     border-radius: 16px;
   }
   
@@ -1332,6 +1343,7 @@ body.dark .certificado-pdf iframe {
     width: 100%;
     padding: 1.5rem 1rem;
     margin: 0;
+    box-sizing: border-box;
   }
   
   .habilidad-tarjeta h3 {
@@ -1349,6 +1361,7 @@ body.dark .certificado-pdf iframe {
   .sobre-mi-personal {
     padding: 1.5rem 1rem;
     margin: 1.5rem 0;
+    box-sizing: border-box;
   }
   
   .timeline {
@@ -1377,6 +1390,7 @@ body.dark .certificado-pdf iframe {
     width: 100%;
     padding: 0.8rem 1rem;
     font-size: 1rem;
+    box-sizing: border-box;
   }
   
   /* Proyectos */
@@ -1616,11 +1630,12 @@ body.dark .certificado-pdf iframe {
   
   .sobre-mi, .curriculum, .contacto {
     padding: 1.5rem 0.8rem;
-    margin: 15px 5px;
+    margin: 15px 2px;
   }
   
   .habilidad-tarjeta {
     padding: 1.2rem 0.8rem;
+    box-sizing: border-box;
   }
   
   .experiencia-tarjeta {
