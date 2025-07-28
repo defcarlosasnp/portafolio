@@ -55,6 +55,10 @@ body.dark .sobre-mi h2,
 body.dark .sobre-mi h3 {
   color: var(--color-dark-titulo);
 }
+
+body.dark .sobre-mi p {
+  color: var(--color-dark-text);
+}
 body.dark .proyecto-card,
 body.dark .proyecto-info,
 body.dark .proyecto-img {
@@ -732,6 +736,16 @@ html {
   color: var(--color-primario);
   font-size: 2rem;
   margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.sobre-mi p {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-texto);
   position: relative;
   z-index: 1;
 }
