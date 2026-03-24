@@ -95,3 +95,51 @@ input, textarea { padding: 1rem; background: rgba(0,0,0,0.3); border: 1px solid 
         height: 300px;
     }
 }
+/* Estilo especial para el proyecto destacado */
+.p-card:first-child {
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Badge de "Nuevo" */
+.badge-tech {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Efecto de resplandor al pasar el mouse */
+.p-card:first-child:hover {
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.2);
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animación sutil de entrada para los proyectos */
+.p-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.p-card:nth-child(1) { animation-delay: 0.1s; }
+.p-card:nth-child(2) { animation-delay: 0.2s; }
+.p-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
