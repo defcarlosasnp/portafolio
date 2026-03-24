@@ -5,23 +5,35 @@ toggleDark.addEventListener('click', () => {
     toggleDark.innerHTML = isDark ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
     lucide.createIcons(); // Recargar iconos
 });
-const form = document.getElementById('contact-form');
+// Esperar a que todo el HTML cargue
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Capturamos los datos
-    const nombre = form.querySelector('input[type="text"]').value;
-    const email = form.querySelector('input[type="email"]').value;
-    const mensaje = form.querySelector('textarea').value;
-    
-    // Tu número de teléfono (sin el +)
-    const telefono = "56926942030";
-    
-    // Creamos el mensaje codificado para URL
-    const texto = `Hola Carlos, mi nombre es ${nombre} (${email}). ${mensaje}`;
-    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
-    
-    // Abrimos WhatsApp
-    window.open(url, '_blank');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Evitar que la página se recargue o salte
+            e.preventDefault();
+            console.log("Formulario detectado, enviando...");
+
+            // Capturar datos por ID
+            const nombre = document.getElementById('wa-name').value;
+            const email = document.getElementById('wa-email').value;
+            const mensaje = document.getElementById('wa-message').value;
+
+            const telefono = "56926942030";
+
+            // Formatear mensaje para WhatsApp
+            const texto = `*Nuevo contacto Portfolio*%0A` +
+                          `*Nombre:* ${nombre}%0A` +
+                          `*Email:* ${email}%0A` +
+                          `*Mensaje:* ${mensaje}`;
+
+            const url = `https://wa.me/${telefono}?text=${texto}`;
+
+            // Abrir WhatsApp en pestaña nueva
+            window.open(url, '_blank');
+        });
+    } else {
+        console.error("No se encontró el formulario con ID 'contact-form'");
+    }
 });
