@@ -67,3 +67,31 @@ input, textarea { padding: 1rem; background: rgba(0,0,0,0.3); border: 1px solid 
     .hero-content h1 { font-size: 3rem; }
     .image-container { margin: 0 auto 2rem; }
 }
+.edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* El PDF ocupa más espacio */
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.qr-container img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.qr-container img:hover {
+    transform: scale(1.1);
+}
+
+.pdf-box iframe {
+    background: #fff; /* Fondo blanco para el visor para que el PDF resalte */
+}
+
+@media (max-width: 850px) {
+    .edu-grid {
+        grid-template-columns: 1fr;
+    }
+    .pdf-box iframe {
+        height: 300px;
+    }
+}
