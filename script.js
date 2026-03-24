@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Esta línea es la clave: carga todos los iconos disponibles en el objeto global
     lucide.createIcons();
-
     // 1. ANIMACIÓN DE REVELADO AL HACER SCROLL
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
