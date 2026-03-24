@@ -33,4 +33,4 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open(url, '_blank');
         });
     }
-});
+
