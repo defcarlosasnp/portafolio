@@ -1,146 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Carlos Calderón | Full Stack Developer</title>
-  
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Calderón | Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Carlos<span>.dev</span></div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#curriculum">Currículum</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span><span></span><span></span>
-      </div>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar container">
+            <div class="logo">Carlos<span>.dev</span></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#curriculum">CV</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
 
-  <main>
-    <section id="inicio" class="section inicio">
-      <div class="container hero-wrapper">
-        <div class="hero-content">
-          <div class="badge">Disponible para proyectos</div>
-          <h1>Carlos Calderón</h1>
-          <h2>Full Stack Developer</h2>
-          <p>Transformando ideas complejas en soluciones digitales <strong>simples</strong>. Cofundador de <a href="https://simpledev.cl" target="_blank">simpledev.cl</a>.</p>
-          <div class="hero-btns">
-            <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
-            <a href="#contacto" class="btn-secondary">Contactar</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <div class="foto-frame">
-            <img src="team-03.png" alt="Carlos Calderón" class="foto-perfil">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre-mi" class="section sobre-mi">
-      <div class="container">
-        <h2 class="section-title">Sobre mí</h2>
-        <div class="sobre-mi-grid">
-          <div class="sobre-mi-texto">
-            <p>Graduado en Ingeniería Informática en Duoc UC. Apasionado por el desarrollo de software, análisis de requerimientos y la gestión de proyectos tecnológicos con enfoque en resultados.</p>
-            <div class="sobre-mi-extra">
-                <div><i data-lucide="gamepad-2"></i> <b>Hobbies:</b> Videojuegos, música, IA.</div>
-                <div><i data-lucide="heart"></i> <b>Valores:</b> Responsabilidad y Creatividad.</div>
-            </div>
-          </div>
-          
-          <div class="habilidades-grid">
-            <div class="habilidad-card">
-              <h3>Tecnologías</h3>
-              <div class="tags">
-                <span>PHP</span> <span>Python</span> <span>Go</span> <span>JavaScript</span> 
-                <span>React</span> <span>Angular</span> <span>Ionic</span> <span>SQL</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="proyectos" class="section proyectos">
-      <div class="container">
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <div class="proyectos-lista">
-          <div class="proyecto-card">
-            <div class="proyecto-img">
-              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="SimpleDev">
-            </div>
-            <div class="proyecto-info">
-              <span class="proyecto-tag">Startup</span>
-              <h3>SimpleDev.cl</h3>
-              <p>Desarrollo de dashboards y sitios web enfocados en facilidad de uso.</p>
-              <div class="proyecto-tec">React · Node · SQL</div>
-              <a href="https://simpledev.cl" target="_blank" class="proyecto-link">Visitar sitio <i data-lucide="external-link"></i></a>
-            </div>
-          </div>
-
-          <div class="proyecto-card">
-            <div class="proyecto-img">
-              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Refugio">
-            </div>
-            <div class="proyecto-info">
-              <span class="proyecto-tag">Dashboard</span>
-              <h3>El Refugio de Naela</h3>
-              <p>Visualización de métricas clave para toma de decisiones empresariales.</p>
-              <div class="proyecto-tec">PHP · API REST · JS</div>
-              <a href="https://elrefugiodenaela.cl" target="_blank" class="proyecto-link">Visitar sitio <i data-lucide="external-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" class="section contacto">
-      <div class="container">
-        <h2 class="section-title">Hablemos</h2>
-        <div class="contacto-wrapper">
-            <form id="contact-form">
-                <div class="form-group">
-                  <input type="text" id="nombre" placeholder="Tu Nombre" required>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <span class="badge">Disponible para proyectos</span>
+                    <h1>Carlos Calderón</h1>
+                    <p class="subtitle">Full Stack Developer</p>
+                    <p class="description">
+                        Transformando ideas complejas en soluciones digitales <strong>simples</strong>. 
+                        Cofundador de <a href="https://simpledev.cl" target="_blank">simpledev.cl</a>.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#contacto" class="btn btn-secondary">Contactar</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <input type="email" id="correo" placeholder="Tu Correo" required>
+                <div class="hero-image">
+                    <div class="foto-frame">
+                        <img src="team-03.png" alt="Carlos Calderón">
+                    </div>
                 </div>
-                <div class="form-group">
-                  <textarea id="mensaje" placeholder="¿En qué puedo ayudarte?" required></textarea>
-                </div>
-                <button type="submit" class="btn-primary">Enviar Mensaje</button>
-            </form>
-            <div class="contacto-info-cards">
-                <a href="https://wa.me/56926942030" class="c-card">WhatsApp</a>
-                <a href="https://github.com/carloscalderon0114" class="c-card">GitHub</a>
-                <a href="https://www.linkedin.com/in/carlos-calder%C3%B3n-barros-19a09b223/" class="c-card">LinkedIn</a>
             </div>
-        </div>
-      </div>
-    </section>
-  </main>
+        </section>
+    </main>
 
-  <button id="toggle-dark" class="toggle-dark"><i data-lucide="moon"></i></button>
+    <button id="toggle-dark" class="toggle-dark">
+        <i data-lucide="moon"></i>
+    </button>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Carlos Calderón. Buin, Chile.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <script>lucide.createIcons();</script>
+    <script src="script.js"></script>
 </body>
 </html>
