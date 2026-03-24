@@ -1,59 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Calderón | Full Stack Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Calderón | Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar container">
-            <div class="logo">Carlos<span>.dev</span></div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#curriculum">CV</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">Carlos<span>.dev</span></div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#curriculum">Currículum</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-wrapper">
+        <div class="hero-content">
+          <span class="badge">Disponible para proyectos</span>
+          <h1>Carlos Calderón</h1>
+          <p class="subtitle">Ingeniero en Informática</p>
+          <p class="description">
+            Cofundador de <strong>simpledev.cl</strong> con más de 2 años de experiencia. 
+            Apasionado por transformar ideas en soluciones digitales reales.
+          </p>
+          <div class="hero-btns">
+            <a href="#contacto" class="btn btn-primary">Contáctame</a>
+            <a href="#proyectos" class="btn btn-secondary">Ver Proyectos</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="foto-frame">
+            <img src="team-03.png" alt="Carlos Calderón">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="sobre-mi-grid">
+          <div class="card">
+            <p>Graduado en Duoc UC con experiencia en soporte técnico y desarrollo. Especialista en resolución de problemas y gestión de proyectos tecnológicos.</p>
+            <div class="habilidades-container">
+              <div class="h-col">
+                <h3>Técnicas</h3>
+                <ul>
+                  <li>PHP, Python, JavaScript</li>
+                  <li>React, Angular, Ionic</li>
+                  <li>SQL, PL/SQL</li>
+                </ul>
+              </div>
+              <div class="h-col">
+                <h3>Blandas</h3>
+                <ul>
+                  <li>Comunicación asertiva</li>
+                  <li>Trabajo en equipo</li>
+                  <li>Resolución de problemas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section bg-subtle">
+      <div class="container">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="proyectos-lista">
+          <div class="proyecto-card">
+            <div class="proyecto-info">
+              <h3>SimpleDev.cl</h3>
+              <p>Dashboards y sitios web enfocados en simplicidad.</p>
+              <a href="https://simpledev.cl" target="_blank" class="p-link">Ver sitio</a>
+            </div>
+          </div>
+          <div class="proyecto-card">
+            <div class="proyecto-info">
+              <h3>El Refugio de Naela</h3>
+              <p>Visualización de datos y métricas empresariales.</p>
+              <a href="https://elrefugiodenaela.cl" target="_blank" class="p-link">Ver sitio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="curriculum" class="section">
+      <div class="container">
+        <h2 class="section-title">Trayectoria Profesional</h2>
+        
+        <div class="cv-grid">
+          <div class="cv-item">
+            <span class="cv-date">2025 - Actualidad</span>
+            <h3>Programador Full Stack / Front Specialist</h3>
+            <p class="cv-company">Simple Dev SPA</p>
+            <ul>
+              <li>Desarrollo Full Stack como profesional independiente remoto.</li>
             </ul>
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span><span></span><span></span>
-            </div>
-        </nav>
-    </header>
+          </div>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="container hero-wrapper">
-                <div class="hero-content">
-                    <span class="badge">Disponible para proyectos</span>
-                    <h1>Carlos Calderón</h1>
-                    <p class="subtitle">Full Stack Developer</p>
-                    <p class="description">
-                        Transformando ideas complejas en soluciones digitales <strong>simples</strong>. 
-                        Cofundador de <a href="https://simpledev.cl" target="_blank">simpledev.cl</a>.
-                    </p>
-                    <div class="hero-btns">
-                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-                        <a href="#contacto" class="btn btn-secondary">Contactar</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="foto-frame">
-                        <img src="team-03.png" alt="Carlos Calderón">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+          <div class="cv-item">
+            <span class="cv-date">2023 - 2025</span>
+            <h3>Analista de Soporte y Desarrollador</h3>
+            <p class="cv-company">LetChile</p>
+            <ul>
+              <li>Resolución de tickets y gestión de incidencias.</li>
+              <li>Mejoras en apps web con PHP y React.</li>
+              <li>Lógica en PL/SQL y bases de datos.</li>
+            </ul>
+          </div>
 
-    <button id="toggle-dark" class="toggle-dark">
-        <i data-lucide="moon"></i>
-    </button>
+          <div class="cv-item">
+            <span class="cv-date">2021 - 2024</span>
+            <h3>Educación</h3>
+            <p class="cv-company">Ingeniería Informática - Duoc UC</p>
+            <p>Certificados en Python (Santander Open Academy) y Duoc UC.</p>
+          </div>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="cv-download">
+            <iframe src="508_carloscalderon0114@gmail.com.pdf" width="100%" height="400px"></iframe>
+            <a href="508_carloscalderon0114@gmail.com.pdf" download class="btn btn-primary">Descargar CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section bg-subtle">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contacto-wrapper">
+          <div class="contacto-info">
+            <p><strong>📞 Teléfono:</strong> (+56) 926942030</p>
+            <p><strong>✉️ Email:</strong> carloscalderon0114@gmail.com</p>
+          </div>
+          <form id="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="toggle-dark" class="toggle-dark"><i data-lucide="moon"></i></button>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Carlos Calderón. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
