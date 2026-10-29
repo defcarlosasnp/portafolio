@@ -400,6 +400,36 @@ body:not(.dark-theme) .profile-glow {
 
 /* ===================== PROYECTO DESTACADO ===================== */
 .p-card.featured { border: 1px solid rgba(59, 130, 246, 0.5); position: relative; }
+@media (min-width: 851px) {
+    .p-card.featured {
+        grid-column: span 2;
+    }
+}
+
+.p-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.p-link-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.p-link-secondary:hover {
+    color: var(--text);
+    transform: translateY(-1px);
+}
+.p-link-secondary i { width: 14px; height: 14px; }
+
 .badge-tech {
     position: absolute; top: 1rem; right: 1rem;
     background: var(--primary); color: white;
