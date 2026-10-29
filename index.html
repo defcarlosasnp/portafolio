@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <script src="https://unpkg.com/lucide@0.473.0/dist/umd/lucide.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Calderón | Ingeniero en Informática</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Carlos Calderón | Ingeniero en Informática & Desarrollador de Software</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-theme">
     <div class="glow-bg"></div>
+    <canvas id="bg-canvas"></canvas>
     
     <header>
         <nav class="navbar container">
@@ -17,64 +18,283 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Perfil</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#curriculum">Experiencia</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
+        <!-- HERO -->
         <section id="inicio" class="hero reveal">
             <div class="hero-content">
-                <div class="status-badge"><span class="dot"></span> Disponible 2026</div>
+                <div class="status-badge"><span class="dot"></span> Disponible 2026 • Chile</div>
                 <h1>Carlos <span class="gradient-text">Calderón</span></h1>
-                <p class="subtitle">Ingeniero en Informática</p>
-                <p class="description">Soy cofundador de <strong>simpledev.cl</strong> y desarrollador con 2 años y 3 meses de experiencia. Graduado en Ingeniería Informática en Duoc UC. Apasionado por la tecnología y el desarrollo de software transformando ideas en soluciones robustas.</p>
+                <p class="subtitle">Ingeniero en Informática | Desarrollador de Software</p>
+                <p class="description">
+                    Especializado en desarrollo de software, integración de sistemas mediante APIs REST, pipelines de datos con Python & Prefect y optimización de bases de datos relacionales (SQL Server, PL/SQL). Con experiencia comprobada reduciendo tiempos operativos en logística hasta un 70%.
+                </p>
                 <div class="hero-actions">
-                    <a href="#contacto" class="btn btn-primary">Hablemos</a>
+                    <a href="#contacto" class="btn btn-primary"><i data-lucide="send"></i> Hablemos</a>
+                    <a href="CV_Carlos_Calderon.pdf" download="CV_Carlos_Calderon.pdf" class="btn btn-secondary"><i data-lucide="file-text"></i> Descargar CV</a>
                     <div class="social-mini">
-                        <a href="https://github.com/defcarlosasnp" target="_blank"><i data-lucide="github"></i></a>
-                        <a href="https://www.linkedin.com/in/carlos-calder%C3%B3n-barros-19a09b223/" target="_blank"><i data-lucide="linkedin"></i></a>
-                        <a href="https://wa.me/56926942030" target="_blank"><i data-lucide="message-circle"></i></a>
+                        <a href="https://github.com/defcarlosasnp" target="_blank" title="GitHub"><i data-lucide="github"></i></a>
+                        <a href="https://www.linkedin.com/in/carlos-calder%C3%B3n-barros-19a09b223/" target="_blank" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="https://wa.me/56926942030" target="_blank" title="WhatsApp"><i data-lucide="message-circle"></i></a>
                     </div>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="image-container animate-float">
-                    <img src="team-03.png" alt="Carlos Calderón" class="profile-img">
+                <div class="profile-wrapper animate-float">
+                    <div class="profile-glow"></div>
+                    
+                    <div class="avatar-ring">
+                        <img src="team-03.png" alt="Carlos Calderón" class="profile-img">
+                    </div>
+
+                    <!-- Badges flotantes interactivos -->
+                    <div class="floating-badge badge-code">
+                        <i data-lucide="terminal"></i>
+                        <span>Python & SQL</span>
+                    </div>
+
+                    <div class="floating-badge badge-exp">
+                        <i data-lucide="briefcase"></i>
+                        <span>2+ años exp</span>
+                    </div>
+
+                    <div class="floating-badge badge-stack">
+                        <i data-lucide="layers"></i>
+                        <span>Full-Stack</span>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- SOBRE MÍ / PERFIL PROFESIONAL -->
         <section id="sobre-mi" class="section reveal">
-            <h2 class="title">Sobre mí</h2>
+            <h2 class="title">Perfil Profesional</h2>
             <div class="about-grid">
                 <div class="glass-card about-text">
-                    <p>Graduado en Ingeniería Informática en Duoc UC, con 1 año y 8 meses de experiencia en soporte técnico y desarrollo. Poseo habilidades en múltiples lenguajes de programación y frameworks, así como en bases de datos y resolución de tickets. Busco seguir desarrollándome en mi carrera profesional, aportando mis conocimientos en desarrollo de software, análisis de requerimientos y gestión de proyectos tecnológicos.</p>
+                    <p>
+                        <strong>Ingeniero en Informática</strong> con experiencia en desarrollo de software, integración de sistemas, automatización de procesos y soporte de aplicaciones. Experiencia práctica con <strong>PHP, Python, JavaScript, React y SQL Server</strong>, desarrollando soluciones integrales para logística, bodegas y operaciones industriales.
+                    </p>
+                    <p>
+                        He implementado integraciones mediante <strong>APIs REST</strong>, pipelines de datos automatizados con <strong>Prefect</strong> y mejoras sobre sistemas heredados, siempre con un foco prioritario en la <strong>trazabilidad, eficiencia operativa y resolución ágil de incidencias</strong>.
+                    </p>
                     <div class="sobre-mi-extra">
-                        <p><strong>Hobbies:</strong> Videojuegos, música, aprender nuevas tecnologías, leer, películas.</p>
-                        <p><strong>Valores:</strong> Responsabilidad, compromiso, creatividad, honestidad.</p>
+                        <p><strong>Ubicación:</strong> Chile | Modalidad Presencial / Híbrida / Remota</p>
+                        <p><strong>Valores:</strong> Responsabilidad, compromiso técnico, proactividad y trabajo en equipo.</p>
+                        <p><strong>Hobbies:</strong> Videojuegos, música, nuevas tecnologías, lectura y cine.</p>
                     </div>
                 </div>
+
                 <div class="skills-wrapper">
-                    <div class="glass-card skill-hover">
-                        <h3>Habilidades Técnicas</h3>
+                    <div class="glass-card skill-card">
+                        <h3><i data-lucide="code"></i> Lenguajes & Frameworks</h3>
                         <div class="tags">
-                            <span>PHP</span><span>Python</span><span>JavaScript</span><span>Go</span>
-                            <span>React</span><span>Angular</span><span>Ionic</span><span>Codeigniter</span><span>SQL</span><span>PL/SQL</span>
+                            <span>PHP</span>
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Angular</span>
+                            <span>Ionic</span>
+                            <span>CodeIgniter</span>
+                            <span>HTML5 / CSS3</span>
                         </div>
                     </div>
-                    <div class="glass-card skill-hover">
-                        <h3>Gestión & Soft Skills</h3>
+
+                    <div class="glass-card skill-card">
+                        <h3><i data-lucide="database"></i> Datos & Automatización</h3>
                         <div class="tags">
-                            <span>Resolución de Tickets</span><span>Gestión de Proyectos</span><span>Comunicación asertiva</span><span>Trabajo en equipo</span>
+                            <span>SQL Server (SSMS / dbForge)</span>
+                            <span>MySQL</span>
+                            <span>PL/SQL</span>
+                            <span>Pipelines ETL</span>
+                            <span>Prefect</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card skill-card">
+                        <h3><i data-lucide="cpu"></i> Herramientas & Capacidades</h3>
+                        <div class="tags">
+                            <span>APIs RESTful</span>
+                            <span>GitHub</span>
+                            <span>Visual Studio</span>
+                            <span>Generación QR (GD)</span>
+                            <span>Integración de Sistemas</span>
+                            <span>Resolución de Tickets</span>
+                            <span>Trazabilidad Logística</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- EXPERIENCIA LABORAL -->
+        <section id="curriculum" class="section reveal">
+            <h2 class="title">Experiencia Profesional</h2>
+            <div class="timeline">
+                
+                <!-- Agrícola Quelen -->
+                <div class="glass-card tl-item">
+                    <div class="tl-header">
+                        <div>
+                            <h3>Desarrollador de Software</h3>
+                            <p class="tl-company">Agrícola Quelen SpA (Quelenfruit)</p>
+                        </div>
+                        <span class="tl-date"><i data-lucide="calendar"></i> 2025 - 2026</span>
+                    </div>
+                    <ul class="tl-achievements">
+                        <li>
+                            <strong>Automatización logística:</strong> Desarrollé un portal web para registro y solicitud de camiones, con panel de control y exportación a Excel, <span class="tl-metric-badge">reduciendo el tiempo de registro en andenes de 10 a 3 minutos (70% de optimización)</span>.
+                        </li>
+                        <li>
+                            <strong>Integración de sistemas:</strong> Conecté sistema MAF con procesos de packing y trazabilidad en SDT Merquén, realizando mapeo de datos entre SQL (BD_Compaq) y endpoints de API REST.
+                        </li>
+                        <li>
+                            <strong>Desarrollo interno:</strong> Implementé soluciones como <em>Materiales Interplanta</em> y <em>Estriba Nueces</em> para apoyar la gestión logística, control de movimientos y bodegas.
+                        </li>
+                        <li>
+                            <strong>Ingeniería de datos:</strong> Administré pipelines y automatizaciones con Python y Prefect para generar estadísticas operacionales diarias, incluyendo procesos de llegadas de fruta.
+                        </li>
+                        <li>
+                            <strong>Mantenimiento y modernización:</strong> Depuré aplicaciones PHP, actualicé componentes de códigos QR mediante librería GD y refactoricé código heredado para mejorar compatibilidad y mantenibilidad.
+                        </li>
+                    </ul>
+                    <div class="tl-tags">
+                        <span>Python</span>
+                        <span>Prefect</span>
+                        <span>PHP</span>
+                        <span>SQL Server</span>
+                        <span>APIs REST</span>
+                        <span>Librería GD</span>
+                        <span>Logística</span>
+                    </div>
+                </div>
+
+                <!-- SimpleDev -->
+                <div class="glass-card tl-item">
+                    <div class="tl-header">
+                        <div>
+                            <h3>Cofundador & Desarrollador Full-Stack</h3>
+                            <p class="tl-company">Simple Dev SpA / SimpleDev.cl</p>
+                        </div>
+                        <span class="tl-date"><i data-lucide="calendar"></i> 2025 - Actualidad</span>
+                    </div>
+                    <p class="tl-desc">
+                        Cofundador. Desarrollo y despliegue de proyectos web integrales, plataformas corporativas, dashboards para visualización de métricas de negocio, gestión con clientes y análisis de datos.
+                    </p>
+                    <div class="tl-tags">
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>Dashboards</span>
+                        <span>Análisis de Datos</span>
+                        <span>UI/UX</span>
+                    </div>
+                </div>
+
+                <!-- LetChile Desarrollador -->
+                <div class="glass-card tl-item">
+                    <div class="tl-header">
+                        <div>
+                            <h3>Analista de Soporte y Desarrollador Full-Stack</h3>
+                            <p class="tl-company">Empresa LetChile</p>
+                        </div>
+                        <span class="tl-date"><i data-lucide="calendar"></i> 2023 - 2025</span>
+                    </div>
+                    <ul class="tl-achievements">
+                        <li>
+                            <strong>Desarrollo web:</strong> Creación y mantenimiento continuo de funcionalidades para aplicaciones web utilizando PHP, React y JavaScript.
+                        </li>
+                        <li>
+                            <strong>Soporte e incidencias:</strong> Gestión y resolución eficiente de tickets de software, asegurando diagnóstico técnico oportuno y continuidad operacional del negocio.
+                        </li>
+                        <li>
+                            <strong>Bases de datos:</strong> Implementación de lógica de negocio, procedimientos y consultas optimizadas sobre bases de datos relacionales en SQL y PL/SQL.
+                        </li>
+                    </ul>
+                    <div class="tl-tags">
+                        <span>PHP</span>
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>SQL</span>
+                        <span>PL/SQL</span>
+                        <span>Soporte Nivel 2</span>
+                    </div>
+                </div>
+
+                <!-- LetChile Práctica -->
+                <div class="glass-card tl-item">
+                    <div class="tl-header">
+                        <div>
+                            <h3>Práctica Profesional - Desarrollador</h3>
+                            <p class="tl-company">Empresa LetChile</p>
+                        </div>
+                        <span class="tl-date"><i data-lucide="calendar"></i> 2023</span>
+                    </div>
+                    <ul class="tl-achievements">
+                        <li>
+                            <strong>Módulos web:</strong> Desarrollo de módulos web en PHP e implementaciones de integración mediante APIs RESTful y bases de datos relacionales.
+                        </li>
+                        <li>
+                            <strong>Análisis técnico:</strong> Participación activa en levantamiento y análisis de requerimientos con el equipo de ingeniería para planificación de mejoras.
+                        </li>
+                    </ul>
+                    <div class="tl-tags">
+                        <span>PHP</span>
+                        <span>APIs RESTful</span>
+                        <span>Bases de Datos</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- EDUCACIÓN Y CERTIFICADOS -->
+            <div class="edu-grid" style="margin-top: 4rem;">
+                <div class="glass-card edu-info">
+                    <h3><i data-lucide="graduation-cap"></i> Formación & Certificaciones</h3>
+                    <p style="margin-top: 10px;"><strong>Ingeniería Informática</strong> – Instituto Duoc UC (2021 - 2024)</p>
+                    
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i data-lucide="award"></i>
+                            <div style="flex: 1;">
+                                <strong>Santander Open Academy</strong>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;">Certificación en Programación Python</p>
+                            </div>
+                            <a href="508_carloscalderon0114@gmail.com.pdf" target="_blank" title="Ver Certificado Santander" style="color: var(--primary-light); display: flex; align-items: center; gap: 4px; font-size: 0.82rem; text-decoration: none;">
+                                Ver <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                            </a>
+                        </div>
+                        <div class="cert-item">
+                            <i data-lucide="check-circle-2"></i>
+                            <div>
+                                <strong>Instituto Duoc UC</strong>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;">Título Profesional de Ingeniero en Informática</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="qr-container" style="margin-top: 25px; text-align: center;">
+                        <img src="Screenshot_1.png" alt="QR Certificados" class="qr-img">
+                        <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;">Escanear para verificar certificados</p>
+                    </div>
+                </div>
+
+                <div class="glass-card pdf-box">
+                    <h3><i data-lucide="file-check"></i> Currículum Oficial</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 12px;">Visualización del documento oficial en PDF:</p>
+                    <iframe src="CV_Carlos_Calderon.pdf" width="100%" height="340px" style="border-radius: 12px; border: none; background: white;"></iframe>
+                    <a href="CV_Carlos_Calderon.pdf" download="CV_Carlos_Calderon.pdf" class="btn btn-secondary w-full" style="margin-top:15px;">
+                        <i data-lucide="download"></i> Descargar Currículum Vitae (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
         <section id="proyectos" class="section reveal">
             <h2 class="title">Proyectos Destacados</h2>
             <div class="proyectos-grid">
@@ -94,76 +314,42 @@
                     <p>Visualización de datos y métricas clave para la toma de decisiones empresariales y sitio web organizacional.</p>
                     <a href="https://elrefugiodenaela.cl" target="_blank" class="p-link">Ver sitio <i data-lucide="external-link"></i></a>
                 </div>
-                </div>
                 <div class="glass-card p-card">
                     <h3>TCG HUB</h3>
-                    <p>Pagina creada para jugadores de tcg pokemon, muestra diversas funcionalidades.</p>
+                    <p>Página creada para jugadores de TCG Pokémon con diversas funcionalidades interactivas.</p>
                     <a href="https://tcg-buin.wuaze.com/" target="_blank" class="p-link">Ver sitio <i data-lucide="external-link"></i></a>
                 </div>
             </div>
         </section>
 
-        <section id="curriculum" class="section reveal">
-            <h2 class="title">Experiencia Laboral</h2>
-            <div class="timeline">
-                <div class="glass-card tl-item">
-                    <span class="tl-date">2025 - Actualidad</span>
-                    <h3>Full Stack / Front Specialist</h3>
-                    <p class="tl-company">Simple Dev SPA / SimpleDev.cl</p>
-                    <p>Cofundador. Desarrollo de proyectos, dashboards, gestión de clientes y análisis de datos en modalidad remota.</p>
-                </div>
-                <div class="glass-card tl-item">
-                    <span class="tl-date">2023 - 2025</span>
-                    <h3>Analista de Soporte y Desarrollador</h3>
-                    <p class="tl-company">Empresa LetChile</p>
-                    <ul>
-                        <li>Resolución de tickets de soporte técnico y gestión de incidencias.</li>
-                        <li>Desarrollo de funcionalidades con PHP y React.</li>
-                        <li>Lógica de negocio en PL/SQL y bases de datos.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="edu-grid" style="margin-top: 4rem;">
-                <div class="glass-card edu-info">
-                    <h3>Formación Académica</h3>
-                    <p><strong>Ingeniería Informática</strong> – Instituto Duoc UC (2021-2024)</p>
-                    <p style="margin-top: 10px; color: var(--text-dim);">Certificados: Duoc UC, Santander Open Academy (Python).</p>
-                    <div class="qr-container" style="margin-top: 20px;">
-                        <img src="Screenshot_1.png" alt="QR Certificados" class="qr-img">
-                    </div>
-                </div>
-                <div class="glass-card pdf-box">
-                    <h3>Certificado PDF</h3>
-                    <iframe src="508_carloscalderon0114@gmail.com.pdf" width="100%" height="300px" style="border-radius: 12px; border: none;"></iframe>
-                    <a href="508_carloscalderon0114@gmail.com.pdf" download class="btn btn-secondary w-full" style="margin-top:15px; text-align:center;">Descargar PDF</a>
-                </div>
-            </div>
-        </section>
-
+        <!-- CONTACTO -->
         <section id="contacto" class="section reveal">
             <h2 class="title">Contacto</h2>
             <div class="contact-grid">
                 <div class="glass-card contact-info">
                     <h3>Hablemos Directo</h3>
-                    <div class="info-item"><i data-lucide="phone"></i> <span>(+56) 926942030</span></div>
+                    <p style="color: var(--text-dim); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        ¿Tienes una propuesta laboral o un proyecto en mente? Escríbeme y responderé a la brevedad.
+                    </p>
+                    <div class="info-item"><i data-lucide="phone"></i> <span>(+56) 9 2694 2030</span></div>
                     <div class="info-item"><i data-lucide="mail"></i> <span>carloscalderon0114@gmail.com</span></div>
+                    <div class="info-item"><i data-lucide="map-pin"></i> <span>Chile</span></div>
                     <div class="social-links-large">
-                        <a href="https://github.com/defcarlosasnp" class="social-btn"><i data-lucide="github"></i> GitHub</a>
-                        <a href="https://www.linkedin.com/in/carlos-calder%C3%B3n-barros-19a09b223/" class="social-btn"><i data-lucide="linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/defcarlosasnp" target="_blank" class="social-btn"><i data-lucide="github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/carlos-calder%C3%B3n-barros-19a09b223/" target="_blank" class="social-btn"><i data-lucide="linkedin"></i> LinkedIn</a>
                     </div>
                 </div>
                 <form id="contact-form" class="glass-card">
                     <input type="text" id="wa-name" placeholder="Tu nombre" required>
-                    <input type="email" id="wa-email" placeholder="Tu correo" required>
-                    <textarea id="wa-message" placeholder="¿En qué puedo ayudarte?" rows="4" required></textarea>
-                    <button type="submit" class="btn btn-primary w-full">Enviar a WhatsApp</button>
+                    <input type="email" id="wa-email" placeholder="Tu correo electrónico" required>
+                    <textarea id="wa-message" placeholder="¿En qué puedo ayudarte o qué proyecto tienes en mente?" rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary w-full"><i data-lucide="message-circle"></i> Enviar mensaje a WhatsApp</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <button id="toggle-dark" class="toggle-dark"><i data-lucide="moon"></i></button>
+    <button id="toggle-dark" class="toggle-dark" title="Cambiar tema"><i data-lucide="moon"></i></button>
 
     <script src="script.js"></script>
 </body>
